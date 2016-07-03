@@ -8,7 +8,7 @@ ruby VidPoint.rb source.mp4 dest.ppt [frames to pass before saving a screenshot]
 
 ###Example
 ```
-ruby VidPoint.rb meme.mp4 meme.ppt 10 2 640x380
+ruby VidPoint.rb meme.mp4 meme.ppt 1 2 640x380
 ```
 
 ##Setup
