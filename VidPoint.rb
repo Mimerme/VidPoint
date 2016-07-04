@@ -25,13 +25,14 @@ screenshots = {}
 
 while video_iterate < video_length do
   pre_frame_parse+=1
-  video_iterate += frame_time
+ 
   if(pre_frame_parse === frame_parse)
     movie.screenshot("screenshot#{video_iterate}.png", seek_time: video_iterate, resolution: ARGV[4])
     powerpoint.add_pictorial_slide "screenshot#{video_iterate}" , "screenshot#{video_iterate}.png" , {x: 12700, y: 12700, cx: 9173600, cy: 6853600}
     screenshots[video_iterate] = "#{video_iterate}"
     pre_frame_parse = 0
   end
+ video_iterate += frame_time
 end
 
 powerpoint.save(ARGV[1])
